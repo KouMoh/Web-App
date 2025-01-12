@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Docu</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            overflow-x: hidden;
+
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 130px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #405189;
+            padding-top: 16px;
+
+        }
+
+        .sidebar i {
+            color: #f1f1f1;
+            padding: 2px 50px;
+            font-size: 40px;
+        }
+
+        .sidebar ul li {
+            list-style: none;
+
+        }
+
+        .sidebar a {
+            padding: 20px 0;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            display: block;
+            transition: 0.3s ease-in;
+        }
+
+        .sidebar a:hover {
+            color: aquamarine;
+        }
+
+        .sidebar i{
+            position: relative;
+            right: 10px;
+            transition: 0.3s ease-in;
+        }
+        .sidebar i:hover{
+            cursor: pointer;
+            color: aqua;
+        }
+
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            padding: 0px 10px;
+        }
+
+        .text {
+            align-items: center;
+            text-align: center;
+            padding: 12px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            display: block;
+            text-align: center;
+            background: #bee7e7;
+            padding: -1px;
+            margin: 0;
+            width: 100%;
+
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav {
+            padding: 30px;
+        }
+
+        nav form {
+            position: absolute;
+            right: 12px;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        .dropdown-show {
+            position: relative;
+            left: 200px;
+            padding: 7px;
+            width: 55px;
+            height: 50px;
+            border: -12px solid rgb(47, 0, 255);
+            border-radius: 50%;
+            background: rgb(109, 109, 233);
+            transition: 0.3s ease;
+        }
+
+        .dropdown-show:hover{
+            background: #8ec2c2;
+        }
+
+        .dropdown-show  img {
+            position: relative;
+            left: -4px;
+            bottom: 7px;
+            height: 50px;
+            width: 50px;
+            padding: 1px;
+            border-radius: 50%;
+            align-self: center;
+        }
+
+        .dropdown-item img {
+            align-content: center;
+        }
+
+
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <i class="fa-brands fa-drupal"></i>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <form action="backend.php">
+            <input type="search" name="Search" placeholder="Search here" id="search">
+            <label for="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+        </form>
+        <div class="dropdown-show">
+            <a href="http://127.0.0.1:5500/pfp.html" target="_blank" class="dropdown-item"><img src="pfp.jpg" alt="err"></a>
+        </div>
+    </nav>
+
+    <div class="main">
+
+        <div class="text">
+            <h2>Main Body</h2>
+            <p>This side navigation is of full height (100%) and always shown.</p>
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+            <p>Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut
+                quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et.
+                Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        </div>
+
+    </div>
+    <div class="footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+</html>
